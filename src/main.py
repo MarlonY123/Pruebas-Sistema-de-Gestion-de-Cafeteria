@@ -48,6 +48,3 @@ def registroBebidas(entrada):
 
     # Retornar mensaje de éxito si todas las validaciones pasaron
     return "Registro de nueva bebida exitoso"
-
-
-print(registroBebidas("expresso,1,2,3,4,5"))
