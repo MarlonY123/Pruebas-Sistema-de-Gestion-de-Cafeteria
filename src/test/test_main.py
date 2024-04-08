@@ -1,7 +1,6 @@
 import pytest
 from src.main import registroBebidas
 
-
 #Pruebas para Nombre de la Bebida
 
 #Válido: El nombre de la bebida es alfabético.

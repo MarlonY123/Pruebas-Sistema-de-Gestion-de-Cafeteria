@@ -2,7 +2,6 @@ def registroBebidas(entrada):
     # Separar la entrada por comas y eliminar espacios en blanco al principio y al final de cada elemento
     entrada = entrada.split(',')
     entrada = [e.strip() for e in entrada]
-
     # Verificar que el nombre del artículo solo contenga caracteres alfabéticos
     if not entrada[0].isalpha():
         raise Exception("El nombre solo debe contener caracteres alfabéticos")
@@ -25,17 +24,14 @@ def registroBebidas(entrada):
         try:
             # Intentar convertir el tamaño a flotante
             numero = float(i)
-
             # Verificar si el número es realmente un entero
             if not numero.is_integer():
                 raise Exception("Se esperaba un número entero, se obtuvo un decimal")
         except ValueError:
             # Capturar el error si el valor no es un número
             raise Exception("Entrada no válida, se esperaba un número")
-
         # Convertir a entero después de verificar que es un entero
         numero = int(numero)
-
         # Verificar si el tamaño está dentro del rango permitido (1 a 48)
         if 1 <= numero <= 48:
             # Verificar si los tamaños están en orden ascendente
@@ -45,6 +41,5 @@ def registroBebidas(entrada):
                 raise Exception("Orden de los tamaños incorrectos")
         else:
             raise Exception("Tamaño fuera de rango")
-
     # Retornar mensaje de éxito si todas las validaciones pasaron
     return "Registro de nueva bebida exitoso"
